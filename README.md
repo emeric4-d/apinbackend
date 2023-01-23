@@ -1,95 +1,92 @@
-Welcome to the AWS CodeStar sample web service
-==============================================
+# backend
 
-This sample code helps get you started with a simple Express web service
-deployed by AWS Elastic Beanstalk and AWS CloudFormation.
 
-What's Here
------------
 
-This sample includes:
+## Getting started
 
-* README.md - this file
-* .ebextensions/ - this directory contains the configuration files that
-  AWS Elastic Beanstalk will deploy your Express service
-* package.json - this file contains various metadata relevant to your Node.js
-  application such as dependencies
-* server.js - this file contains the code for your service
-* tests/ - this directory contains unit tests for your application
-* template.yml - this file contains the description of AWS resources used by AWS
-  CloudFormation to deploy your infrastructure
-* template-configuration.json - this file contains the project ARN with placeholders used for tagging resources with the project ID
+To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
-Getting Started
----------------
+Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
 
-These directions assume you want to develop on your development environment or a Cloud9 environment, and not
-from the Amazon EC2 instance itself. If you're on the Amazon EC2 instance, the
-virtual environment is already set up for you, and you can start working on the
-code.
+## Add your files
 
-To work on the sample code, you'll need to clone your project's repository to your
-local computer. If you haven't, do that first. You can find instructions in the AWS CodeStar user guide at https://docs.aws.amazon.com/codestar/latest/userguide/getting-started.html#clone-repo.
+- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
+- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
 
-1. Install Node.js on your computer. For details on available installers visit
-   https://nodejs.org/en/download/.
+```
+cd existing_repo
+git remote add origin https://gitlab.com/franckemerick45/backend.git
+git branch -M main
+git push -uf origin main
+```
 
-2. Install NPM dependencies:
+## Integrate with your tools
 
-        $ npm install
+- [ ] [Set up project integrations](https://gitlab.com/franckemerick45/backend/-/settings/integrations)
 
-3. Start the development server:
+## Collaborate with your team
 
-        $ node server.js
+- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
+- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
+- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
+- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
+- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
 
-4. Open http://127.0.0.1:3000/ in a web browser to view your service.
+## Test and Deploy
 
-What Do I Do Next?
-------------------
+Use the built-in continuous integration in GitLab.
 
-Once you have a virtual environment running, you can start making changes to
-the sample Express web service. We suggest making a small change to
-server.js first, so you can see how changes pushed to your project's repository
-are automatically picked up and deployed to the Amazon EC2 instance by AWS Elastic
-Beanstalk. (You can watch the progress on your project dashboard.) Once you've seen
-how that works, start developing your own code, and have fun!
+- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
+- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
+- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
+- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
+- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
 
-To run your tests locally, go to the root directory of the
-sample code and run the `npm test` command, which
-AWS CodeBuild also runs through your `buildspec.yml` file.
+***
 
-To test your new code during the release process, modify the existing tests or
-add tests to the tests directory. AWS CodeBuild will run the tests during the
-build stage of your project pipeline. You can find the test results
-in the AWS CodeBuild console.
+# Editing this README
 
-Learn more about AWS CodeBuild and how it builds and tests your application here:
-https://docs.aws.amazon.com/codebuild/latest/userguide/concepts.html
+When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
 
-Learn more about AWS CodeStar by reading the user guide.  Ask questions or make
-suggestions on our forum.
+## Suggestions for a good README
+Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
 
-User Guide: https://docs.aws.amazon.com/codestar/latest/userguide/welcome.html
+## Name
+Choose a self-explaining name for your project.
 
-Forum: https://forums.aws.amazon.com/forum.jspa?forumID=248
+## Description
+Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
 
-How Do I Add Template Resources to My Project?
-------------------
+## Badges
+On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
 
-To add AWS resources to your project, you'll need to edit the `template.yml`
-file in your project's repository. You may also need to modify permissions for
-your project's worker roles. After you push the template change, AWS CodeStar
-and AWS CloudFormation provision the resources for you.
+## Visuals
+Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
-See the AWS CodeStar user guide for instructions to modify your template:
-https://docs.aws.amazon.com/codestar/latest/userguide/how-to-change-project.html#customize-project-template
+## Installation
+Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-What Should I Do Before Running My Project in Production?
-------------------
+## Usage
+Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
-AWS recommends you review the security best practices recommended by the framework
-author of your selected sample application before running it in production. You
-should also regularly review and apply any available patches or associated security
-advisories for dependencies used within your application.
+## Support
+Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
 
-Best Practices: https://docs.aws.amazon.com/codestar/latest/userguide/best-practices.html?icmpid=docs_acs_rm_sec
+## Roadmap
+If you have ideas for releases in the future, it is a good idea to list them in the README.
+
+## Contributing
+State if you are open to contributions and what your requirements are for accepting them.
+
+For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+
+You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+
+## Authors and acknowledgment
+Show your appreciation to those who have contributed to the project.
+
+## License
+For open source projects, say how it is licensed.
+
+## Project status
+If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
